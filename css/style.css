@@ -1,18 +1,38 @@
 .container {
-    width:50%;
-    display:flex;
-    flex-wrap:wrap;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .tile {
-    width:23%;
-    padding:5%;
+  width: 23%;
+  padding: 5%;
 }
 
 .right {
-    border-right: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .bottom {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
+}
+button {
+  background: #E9967A;
+  border-radius: 20px;
+}
+html {
+  background: #CD5C5C;
+}
+h1 {
+  font-family: "Shippori Mincho", serif;
+}
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
 }

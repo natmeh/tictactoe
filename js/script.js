@@ -2,8 +2,6 @@ var times = 0;
 var turn = "x";
 var ended = false;
 
-
-
 function performLogic(button, tile) {
   let box = turn;
   $(button).hide();
@@ -21,29 +19,25 @@ function changePlayer() {
     turn = "x";
   }
 }
-function increseTime(){
-  times= times+1;
-  if (times==9){
-    ended=true
-    $("#display").html("it's a draw")
+function increseTime() {
+  times = times + 1;
+  if (times == 9) {
+    ended = true;
+    $("#display").html("it's a draw");
   }
-  
 }
 
 function checkWin(tile1id, tile2id, tile3id) {
-  
   if (
     $(tile1id).html() == turn &&
     $(tile2id).html() == turn &&
     $(tile3id).html() == turn
   ) {
-     ended=true;
-    $("#display").html(turn+" won the game");
+    ended = true;
+    $("#display").html(turn + " won the game");
     console.log(turn);
   } else {
-    ended= false;
-  
-
+    ended = false;
   }
 }
 function vertical() {
@@ -51,16 +45,15 @@ function vertical() {
   checkWin("#tile2", "#tile5", "#tile8");
   checkWin("#tile3", "#tile6", "#tile9");
 }
-function horizontal(){
+function horizontal() {
   checkWin("#tile1", "#tile2", "#tile3");
   checkWin("#tile4", "#tile5", "#tile6");
   checkWin("#tile7", "#tile8", "#tile9");
 }
-function diagonal (){
+function diagonal() {
   checkWin("#tile1", "#tile5", "#tile9");
   checkWin("#tile3", "#tile5", "#tile7");
 }
-
 
 $("#button1").click(function() {
   performLogic("#button1", "#tile1");
